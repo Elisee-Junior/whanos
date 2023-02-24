@@ -1,0 +1,15 @@
+FROM maven:3.8-openjdk-17-slim
+
+ONBUILD COPY . /app
+
+WORKDIR /app
+
+ONBUILD RUN mvn dependency:resolve -f app/pom.xml
+
+ONBUILD RUN mvn package -f app/pom.xml
+
+ONBUILD RUN app/target/app.jar .
+
+ONBUILD RUN rm -rf app/
+
+ONBUILD CMD ["java", "-jar", "app.jar"]

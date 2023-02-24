@@ -1,0 +1,11 @@
+FROM gcc:11.2
+
+ONBUILD COPY . /app
+
+ONBUILD WORKDIR /app
+
+ONBUILD CMD make
+
+ONBUILD RUN rm -fr Makefile app
+
+ONBUILD CMD [ "./compiled-app" ]

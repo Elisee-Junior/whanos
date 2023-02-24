@@ -1,0 +1,10 @@
+FROM node:14.17.5-alpine
+COPY . /app
+
+WORKDIR /app
+
+RUN npm install dependencies --production=false
+
+EXPOSE 3000
+
+CMD [ "node", "." ]
