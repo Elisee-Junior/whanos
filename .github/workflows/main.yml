@@ -1,0 +1,22 @@
+name: Update Mirror
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+          ref: main
+      - name: ADD to Epitech repository
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@github.com:EpitechPromo2025/B-DOP-500-COT-5-1-whanos-elisee-junior.gbaguidi.git          
+          ssh_private_key:
+            ${{ secrets.SSH_KEY }}
