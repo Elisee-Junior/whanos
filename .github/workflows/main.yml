@@ -19,11 +19,4 @@ jobs:
           target_repo_url:
             git@github.com:EpitechPromo2025/B-DOP-500-COT-5-1-whanos-elisee-junior.gbaguidi.git          
           ssh_private_key:
-            -----BEGIN OPENSSH PRIVATE KEY-----
-            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-            QyNTUxOQAAACCI39MqernPbYZMsyoI+h/OHEs4xr2T1tOOwx1pMnn9oAAAAKirHUCCqx1A
-            ggAAAAtzc2gtZWQyNTUxOQAAACCI39MqernPbYZMsyoI+h/OHEs4xr2T1tOOwx1pMnn9oA
-            AAAEDSQQ3/pb8pf3NJYUtUF0j1wTKX6aSMjGhemnwrxTGbR4jf0yp6uc9thkyzKgj6H84c
-            SzjGvZPW047DHWkyef2gAAAAIWVsaXNlZS1qdW5pb3IuZ2JhZ3VpZGlAZXBpdGVjaC5ldQ
-            ECAwQ=
-            -----END OPENSSH PRIVATE KEY-----
+            ${{ secrets.EPI_MIRRORING_KEY }}
